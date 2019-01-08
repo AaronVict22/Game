@@ -9,6 +9,7 @@ import random
 
 killers = ['Bill','Jim','Sally','Phill']
 
+
 killer = random.choice(killers)
 killers.remove(killer)
 suspect1 = random.choice(killers)
@@ -17,7 +18,8 @@ suspect2 = random.choice(killers)
 killers.remove(suspect2)
 suspect3 = random.choice(killers)
 
-print(killer, suspect1, suspect2, suspect3)
+
+options = {'1': 'I was not there', '2': 'I was in the library', '3': 'You should ask ' + suspect1}
 
 #Print statements
 print("You're a detective and you have to catch a murderer\n")
@@ -33,25 +35,20 @@ if choose1 == 1:
 
     print("They've found Jessica dead with " + suspect1)
     print("1 for " + suspect1 + "\n2 for " + suspect2 + "\n3 for " + killer + "\n4 for " + suspect3)
-    choose2 = int(input("Who would you like to question first"))
+    choose2 = int(input("Who would you like to question first: "))
     if choose2 == 1:
-        print("You chose " + supect1)
+        print("You chose " + suspect1)
         print("1 for What happened?\n2 for Where were you?\n3 for who did it?")
         n = int(input())
-        options = {
-            1: "I'm not sure I wasn't there",
-            2: "I was in the library",
-            3: "I don't know ask " + suspect1
-        }
-
+        options(n)
 if choose1 == 2:
     print("You chose science club")
 
     print("They've found Mr.Johnson dead with all the students in class except " + suspect2)
     print("1 for " + suspect1 + "\n2 for " + suspect2 + "\n3 for " + killer + "\n4 for " + suspect3)
     choose2 = int(input("Who would you like to question first"))
-if choose1
-
+if choose1 == 3:
+    print("I'm workin on it")
 
 
 
